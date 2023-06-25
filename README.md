@@ -1,2 +1,2 @@
-# singlightjs-examples
+# SinglightJs Examples
 Example codes for SinglightJs
