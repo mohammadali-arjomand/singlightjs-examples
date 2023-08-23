@@ -4,12 +4,16 @@ export default class PostsIndexPage extends Page {
     posts = [];
     template() {
         return this.load("navbar") +
-            "<div class='cards' " +
-            "<div @for='post of posts'>" +
-            "<h3>{{ post.title }}</h3>" +
-            "<a @route='{{ post.id }}'>See more</a>" +
-            "<hr>" +
+            "<div @if='{{ posts.length }} == 0'>" +
+                "<h1>Loading ...</h1>" +
+                "<p>Please wait, post data will loading from server ...</p>" +
             "</div>" +
+            "<div class='cards' " +
+                "<div @for='post of posts'>" +
+                    "<h3>{{ post.title }}</h3>" +
+                    "<a @route='{{ post.id }}'>See more</a>" +
+                    "<hr>" +
+                "</div>" +
             "</div>";
     }
     setup() {
