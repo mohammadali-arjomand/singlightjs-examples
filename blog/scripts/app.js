@@ -1,4 +1,4 @@
-import { Singlight, Router } from "./singlight.min.js";
+import { Singlight } from "./singlight.min.js";
 import router from "./router.js";
 
 // create app
